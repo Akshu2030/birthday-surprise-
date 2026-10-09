@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise for Galdy 💜</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sky">
+    <span class="cloud cloud1">☁️</span>
+    <span class="cloud cloud2">☁️</span>
+    <span class="star star1">✦</span>
+    <span class="star star2">✧</span>
+    <span class="star star3">✦</span>
+    <span class="star star4">✧</span>
+  </div>
+
+  <main class="container">
+
+    <!-- PAGE 1: BEST FRIEND QUESTION -->
+    <section class="page active" id="page1">
+      <div class="emoji">💜</div>
+      <h1>Are you my best friend?</h1>
+      <p>Think carefully before you answer! 🥹</p>
+
+      <div class="button-area" id="buttonArea">
+        <button class="btn" id="yesBtn" type="button"
+                onclick="goToPage(2)">YES 💖</button>
+        <button class="btn no-btn" id="noBtn" type="button">NO 🙈</button>
+      </div>
+
+      <p class="hint">Try clicking NO... hehe! 🤭</p>
+    </section>
+
+    <!-- PAGE 2: TEDDY HUG -->
+    <section class="page" id="page2">
+      <div class="emoji">💜</div>
+      <h1>Yayyy! My Bestie! 💕</h1>
+      <p>You are my favourite person! 🥹</p>
+
+      <div class="teddy-scene">
+        <div class="teddy">🧸</div>
+        <div class="teddy">🧸🎀</div>
+        <div class="hug-heart">💜</div>
+      </div>
+
+      <p>Sending you the biggest teddy hug ever! 🫂</p>
+      <button class="btn" onclick="goToPage(3)">
+        Next Surprise ➜
+      </button>
+    </section>
+
+    <!-- PAGE 3: FIVE PHOTO MEMORIES -->
+    <section class="page" id="page3">
+      <h1>Five Little Memories 💜</h1>
+      <p>Open every heart to see our memories!</p>
+
+      <div class="hearts">
+        <button class="heart" onclick="openHeart(0)">💜</button>
+        <button class="heart" onclick="openHeart(1)">💜</button>
+        <button class="heart" onclick="openHeart(2)">💜</button>
+        <button class="heart" onclick="openHeart(3)">💜</button>
+        <button class="heart" onclick="openHeart(4)">💜</button>
+      </div>
+
+      <div id="heartMessage" class="heart-message">
+        Choose a heart! 💌
+      </div>
+
+      <p id="heartCount">0 / 5 hearts opened</p>
+
+      <button class="btn" id="heartNext"
+              onclick="goToPage(4)" disabled>
+        Next ➜
+      </button>
+    </section>
+
+    <!-- PAGE 4: BIRTHDAY CAKE -->
+    <section class="page" id="page4">
+      <h1>Make a Wish! 🎂</h1>
+      <p>Close your eyes and wish for something special! ✨</p>
+
+      <div class="cake-scene">
+        <div class="flame" id="flame">🔥</div>
+        <div class="candle">🕯️</div>
+        <div class="cake">🎂</div>
+      </div>
+
+      <button class="btn" id="startBtn" onclick="blowCandles()">
+        START 🎉
+      </button>
+
+      <div id="birthdayReveal" class="reveal">
+        <div class="confetti">🎉 🎊 💜 🎈 🎉</div>
+        <h1>HAPPY BIRTHDAY!</h1>
+        <h2>GALDY 💜</h2>
+        <p>May all your wishes come true! 🥹</p>
+
+        <button class="btn" onclick="goToPage(5)">
+          One Last Surprise 💌
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 5: FINAL MESSAGE AND VIDEO -->
+    <section class="page" id="page5">
+      <div class="emoji">💜🧸💜</div>
+      <h1>Dear Galdy! 💕</h1>
+
+      <p class="final-message">
+        You deserve all the happiness in the world.
+        Keep smiling, keep shining, and never stop being yourself.
+        May this year bring you lots of love, laughter
+        and beautiful memories! ✨
+      </p>
+
+      <h2>Happy Birthday, Bestie! 🎂</h2>
+
+      <div class="video-container">
+        <video controls playsinline preload="metadata">
+          <source src="birthday video 2.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+
+      <p>Our memories will always be special! 💜</p>
+
+      <button class="btn" onclick="goToPage(1)">
+        Replay Surprise ↻
+      </button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
