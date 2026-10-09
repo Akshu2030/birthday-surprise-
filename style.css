@@ -1,0 +1,273 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: #553765;
+  text-align: center;
+  background: linear-gradient(135deg, #dff5ff, #e9e5ff, #fce4f2);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  padding: 35px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: appear 0.5s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1 {
+  color: #a33c83;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  margin: 12px 0;
+}
+
+h2 {
+  color: #8c4da6;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 25px;
+  margin: 8px;
+  background: #bd65b3;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #a66bb333;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  background: #984b9c;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cloud,
+.star {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.cloud1 { top: 8%; left: 8%; }
+.cloud2 { top: 15%; right: 8%; }
+.star1 { top: 25%; left: 12%; }
+.star2 { top: 40%; right: 10%; }
+.star3 { bottom: 20%; left: 8%; }
+.star4 { bottom: 12%; right: 12%; }
+
+.emoji {
+  font-size: 3rem;
+  margin: 10px;
+}
+
+.button-area {
+  position: relative;
+  min-height: 120px;
+  width: min(100%, 350px);
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.no-btn {
+  background: #8e6ab8;
+  z-index: 5;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #946b96;
+}
+
+.teddy-scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 30px auto;
+}
+
+.teddy {
+  font-size: 4rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.hug-heart {
+  font-size: 2rem;
+}
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px auto;
+}
+
+.heart {
+  font-size: 2.3rem;
+  background: transparent;
+  box-shadow: none;
+  padding: 10px;
+}
+
+.heart:hover {
+  background: transparent;
+  transform: scale(1.2);
+}
+
+.heart.opened {
+  filter: drop-shadow(0 0 8px #c27cff);
+}
+
+.heart-message {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100px;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 20px;
+  background: #ffffffb8;
+}
+
+.memory-photo {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin: 12px auto;
+  box-shadow: 0 6px 20px #72508a22;
+}
+
+.memory-caption {
+  color: #8e4c91;
+  font-weight: bold;
+}
+.memory-extra {
+  max-width: 420px;
+  margin: 10px auto;
+  padding: 12px;
+  color: #684477;
+  background: #f8eaff;
+  border-radius: 15px;
+  line-height: 1.7;
+}
+
+.cake-scene {
+  margin: 25px auto;
+}
+
+.cake {
+  font-size: 5rem;
+}
+
+.candle,
+.flame {
+  font-size: 2rem;
+}
+
+.flame {
+  animation: flicker 0.6s infinite alternate;
+}
+
+.reveal {
+  display: none;
+  margin-top: 25px;
+}
+
+.confetti {
+  font-size: 2rem;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.final-message {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  max-height: 65vh;
+  border-radius: 18px;
+  background: #d7c5e8;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 25px 12px;
+  }
+
+  button {
+    padding: 12px 20px;
+  }
+}
