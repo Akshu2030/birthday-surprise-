@@ -23,7 +23,7 @@ const memories = [
   },
   {
     photo: "sample 1.jpeg",
-    caption: "🎂 Happy Birthday to my favourite person, Glady!",
+    caption: "🎂 Happy Birthday to my favourite person,Gladyy!",
     message: "May your life be filled with love, peace, success, and endless happiness. You deserve all the beautiful things in this world. Love you, bestie! 💜"
   }
 ];
